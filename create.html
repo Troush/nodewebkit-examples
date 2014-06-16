@@ -18,9 +18,12 @@
             <label for="pwd">Password</label>
             <input type="password" class="form-control" id="pwd" placeholder="Password">
           </div>
+          <div class="form-group">
+            <label for="pwd">Password</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Password Again">
+          </div>
           <button id="login-btn" class="btn btn-default">Submit</button>
         </div>
-        <a href="create.html">Craete Admin</a>
     </div>
 </div>
 </body>
@@ -28,22 +31,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    console.log('DOM READY');
-    console.log($('#login-btn'));
-    var form = {
-        login: $('#login'),  
-        password: $('#pwd'),
-        check: function(context) {
-            if (context.login.val() == 'admin' &&
-                context.password.val() == 'admin') {
-                window.location = "app.html";
-            } else {
-                alert('Login name or password is incorrect');
-            }
-        }
-    }
     $('#login-btn').click(function(e){
-        form.check(form);
+        window.localtion = "index.html";
     });
 });
 </script>
