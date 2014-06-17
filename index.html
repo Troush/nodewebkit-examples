@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Hello World!</title>
-</head>
-<body>
-<div class="content">
-   <h1 class="bg-primary">Title</p>
-    <div class="col-lg-12">
-       <div class="bg-primary">
-          <div class="form-group">
-            <label for="login">Email address</label>
-            <input type="text" class="form-control" id="login" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="pwd">Password</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Password">
-          </div>
-          <button id="login-btn" class="btn btn-default">Submit</button>
-        </div>
-        <a href="create.html">Craete Admin</a>
-    </div>
-</div>
-</body>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    console.log('DOM READY');
-    console.log($('#login-btn'));
-    var form = {
-        login: $('#login'),  
-        password: $('#pwd'),
-        check: function(context) {
-            if (context.login.val() == 'admin' &&
-                context.password.val() == 'admin') {
-                window.location = "app.html";
-            } else {
-                alert('Login name or password is incorrect');
-            }
-        }
-    }
-    $('#login-btn').click(function(e){
-        form.check(form);
-    });
-});
-</script>
-</html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Dashboard - SB Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">SB Admin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Create</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+            <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="login">Email address</label>
+                    <input type="text" class="form-control" id="login" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                  </div>
+                  <button id="login-btn" class="btn btn-default">Submit</button>
+                <a href="create.html">Craete Admin</a>
+            </div>
+        </div><!-- /.row -->
+
+       <!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Page Specific Plugins -->
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
