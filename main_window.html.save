@@ -1,0 +1,14 @@
+!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Main!</title>
+</head>
+<body>
+    <div class="content">
+	<p>BlaBlaBla</p>
+    </div>
+
+
+</body>
